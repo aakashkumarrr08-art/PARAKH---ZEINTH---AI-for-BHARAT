@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Complete Bid Package – SafeGuard Armor Industries</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Fira+Code:wght@400;600&family=Raleway:wght@400;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #bfbfbf;
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 11.5px;
+    color: #111;
+    padding: 30px 20px;
+  }
+
+  .page {
+    background: #fffef9;
+    max-width: 820px;
+    margin: 0 auto 40px auto;
+    padding: 48px 58px;
+    box-shadow: 3px 3px 20px rgba(0,0,0,0.28);
+    position: relative;
+  }
+
+  .page-blue {
+    border-top: 8px solid #0d3460;
+  }
+
+  .page-green {
+    border-top: 8px solid #1a5c2a;
+  }
+
+  .page-red {
+    border-top: 8px solid #8b0000;
+    background: #fffcfc;
+  }
+
+  .page-orange {
+    border-top: 8px solid #c05000;
+    background: #fffdf9;
+  }
+
+  .watermark {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 80px;
+    font-weight: 900;
+    color: rgba(0,0,0,0.04);
+    letter-spacing: 6px;
+    pointer-events: none;
+    z-index: 0;
+    white-space: nowrap;
+    font-family: 'Raleway', sans-serif;
+  }
+  .page > * { position: relative; z-index: 1; }
+
+  /* Letterhead */
+  .lh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #0d3460;
+  }
+
+  .lh-logo {
+    display: flex; align-items: center; gap: 14px;
+  }
+
+  .lh-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, #0d3460, #1a5fa0);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  .lh-name { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 16px; color: #0d3460; }
+  .lh-tag { font-size: 9px; color: #555; letter-spacing: 0.5px; font-style: italic; display: block; margin-top: 2px; }
+
+  .lh-contact { font-size: 9.5px; color: #444; text-align: right; line-height: 1.7; }
+  .lh-contact strong { color: #0d3460; }
+
+  .doc-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px; font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #0d3460;
+    text-align: center;
+    margin: 14px 0;
+    padding: 10px;
+    border: 2px solid #0d3460;
+    background: #f0f5ff;
+  }
+
+  .ref-line {
+    display: flex; justify-content: space-between;
+    font-size: 10px; color: #555;
+    padding: 6px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 14px;
+  }
+
+  .ref-line span { color: #0d3460; font-weight: 700; font-size: 10.5px; }
+
+  p { line-height: 1.85; margin-bottom: 8px; text-align: justify; }
+
+  .section-head {
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fff;
+    background: #0d3460;
+    padding: 6px 12px;
+    margin: 16px 0 8px 0;
+  }
+
+  .section-head-green { background: #1a5c2a; }
+  .section-head-red { background: #8b0000; }
+  .section-head-orange { background: #c05000; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    margin: 6px 0 10px 0;
+  }
+
+  th {
+    background: #0d3460;
+    color: #fff;
+    padding: 7px 9px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+  }
+
+  th-green { background: #1a5c2a !important; }
+
+  td {
+    border: 1px solid #c8d0e0;
+    padding: 6px 9px;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  tr:nth-child(even) td { background: #f5f8ff; }
+
+  .mono { font-family: 'Fira Code', monospace; font-size: 10.5px; }
+
+  .total-row td {
+    background: #0d3460 !important;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .subtotal-row td {
+    background: #e0e8f5 !important;
+    font-weight: 700;
+  }
+
+  .highlight { background: #fff8dc !important; }
+
+  .note-box {
+    border: 1px solid #c0a840;
+    background: #fffbee;
+    padding: 9px 13px;
+    font-size: 10.5px;
+    margin: 8px 0;
+    line-height: 1.6;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid #c8d0e0;
+    margin: 10px 0;
+    font-size: 11px;
+  }
+
+  .ig-cell {
+    padding: 7px 12px;
+    border-bottom: 1px solid #c8d0e0;
+    border-right: 1px solid #c8d0e0;
+  }
+
+  .ig-cell:nth-child(even) { border-right: none; }
+  .ig-cell .lbl { font-size: 9.5px; color: #555; text-transform: uppercase; letter-spacing: 0.5px; }
+  .ig-cell .val { font-weight: 700; color: #0d3460; }
+
+  .percent-bar-wrap { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+  .pbar { height: 14px; border-radius: 2px; background: #e8f0e8; flex: 1; overflow: hidden; }
+  .pbar-fill { height: 100%; background: linear-gradient(90deg, #1a5c2a, #4caf6e); }
+  .pbar-label { font-size: 11px; font-weight: 700; color: #1a5c2a; min-width: 40px; }
+
+  .boq-local { color: #1a5c2a; font-weight: 700; }
+  .boq-import { color: #8b0000; }
+
+  .sig-area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+    align-items: flex-end;
+  }
+
+  .sig-block { font-size: 10.5px; }
+  .sig-line { border-top: 1px solid #333; width: 200px; margin: 32px 0 5px 0; }
+
+  .seal-box {
+    width: 80px; height: 80px;
+    border: 2px solid #0d3460;
+    border-radius: 50%;
+    display: flex; align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 6.5px;
+    color: #0d3460;
+    font-weight: 700;
+    line-height: 1.4;
+    opacity: 0.6;
+    transform: rotate(-12deg);
+  }
+
+  .page-num {
+    text-align: center;
+    font-size: 9.5px;
+    color: #888;
+    margin-top: 18px;
+    border-top: 1px solid #eee;
+    padding-top: 7px;
+  }
+
+  ul { padding-left: 20px; line-height: 1.8; list-style: disc; }
+  ul li { margin-bottom: 3px; }
+
+  .price-summary {
+    border: 2px solid #0d3460;
+    padding: 14px 18px;
+    background: #f0f5ff;
+    margin: 10px 0;
+  }
+
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dotted #aabbdd;
+    font-size: 11.5px;
+  }
+
+  .price-row:last-child { border-bottom: none; }
+
+  .price-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 5px 0;
+    border-top: 2px solid #0d3460;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0d3460;
+    margin-top: 5px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .enclosed-list {
+    list-style: none;
+    padding: 0;
+  }
+  .enclosed-list li {
+    padding: 5px 0 5px 22px;
+    border-bottom: 1px dotted #ddd;
+    position: relative;
+    font-size: 11px;
+  }
+  .enclosed-list li::before { content: '□ '; position: absolute; left: 0; font-size: 14px; color: #0d3460; }
+  .enclosed-list li.checked::before { content: '☑ '; color: #1a5c2a; }
+</style>
+</head>
+<body>
+
+<!-- DOC 4A: Cover Letter -->
+<div class="page page-blue">
+  <div class="watermark">CONFIDENTIAL BID</div>
+
+  <div class="lh">
+    <div class="lh-logo">
+      <div class="lh-icon">🛡</div>
+      <div>
+        <div class="lh-name">SafeGuard Armor Industries Ltd.</div>
+        <span class="lh-tag">Protecting Those Who Protect — Bhiwadi, Rajasthan | CIN: L74999DL2009PLC187234</span>
+        <div style="font-size:9.5px; color:#333; margin-top:2px;">GSTIN: 07AABCS8234F1ZK &nbsp;|&nbsp; PAN: AABCS8234F &nbsp;|&nbsp; UDYAM: UDYAM-RJ-02-0078341</div>
+      </div>
+    </div>
+    <div class="lh-contact">
+      <strong>Plot No. 47-B, RIICO Industrial Area,</strong><br>
+      Phase-II, Bhiwadi, Alwar, Rajasthan – 301 019<br>
+      Tel: +91-1493-224XXX | CIN: L74999DL2009PLC187234<br>
+      tenders@safeguardarmor.in | www.safeguardarmor.in
+    </div>
+  </div>
+
+  <div style="text-align:right; font-size:11px; margin-bottom:12px; color:#333;">
+    Ref: SGAI/MKT/CRPF/BPJ/2026/047/CL<br>
+    Date: <strong>14 June 2026</strong>
+  </div>
+
+  <p>
+    <strong>To,</strong><br>
+    The Inspector General (Procurement &amp; Logistics),<br>
+    Central Reserve Police Force Headquarters,<br>
+    CGO Complex, Block-I, Lodhi Road,<br>
+    <strong>New Delhi – 110 003</strong>
+  </p>
+
+  <div class="doc-label">Tender Cover Letter — Technical &amp; Financial Bid</div>
+
+  <p>
+    <strong>Subject:</strong> Submission of Two-Bid (Technical + Financial) Tender in response to Tender No. <strong>CRPF/IG(P&amp;L)/2026-27/BPJ/0041</strong> for procurement of Bulletproof Jackets (Level III+) — 12,500 Nos. + 2,500 Spare Carriers.
+  </p>
+
+  <p>
+    <strong>Reference:</strong> Your Notice Inviting Tender (NIT) No. CRPF/IG(P&amp;L)/2026-27/BPJ/0041 dated 02 May 2026 and Corrigendum No. 1 dated 08 May 2026 (extending Pre-Bid query deadline).
+  </p>
+
+  <p>
+    Dear Sir / Madam,
+  </p>
+
+  <p>
+    We, <strong>SafeGuard Armor Industries Ltd.</strong>, an established manufacturer of ballistic protection equipment based in Bhiwadi, Rajasthan, hereby submit our comprehensive tender offer in response to the above-referenced procurement notice. We have carefully studied the NIT, RFQ, all Sections (I–V), Annexures (A–G), and the Corrigendum, and confirm that our offer is unconditional and in full conformity with the requirements thereof.
+  </p>
+
+  <p>
+    Our company has been in the business of manufacturing body armour and ballistic protection equipment since <strong>2009</strong>. We have supplied over <strong>35,000 units</strong> of ballistic protection equipment to Central Armed Police Forces, State Police organisations, and Central Government agencies over the past fifteen years, with an unblemished quality record. We are a Category-A empanelled vendor with CRPF (GSQR Certificate No. CRPF/VR/GSQR/BPJ/2024/00183) and hold valid NIJ 0101.06 Level III+ and BIS IS 17051:2018 Level-5 certifications for the offered model.
+  </p>
+
+  <div class="section-head">Key Highlights of Our Offer</div>
+  <ul>
+    <li>Offered Model: <strong>SGAI-APEX-3P</strong> — Level III+ bulletproof jacket with SiC ceramic hard plates and UHMWPE soft armour</li>
+    <li>Weight (Size M, fully assembled): <strong>7.8 kg</strong> — exceeds requirement of ≤ 8.5 kg</li>
+    <li>Quick release time (tested): <strong>avg. 1.8 seconds</strong> — exceeds ≤ 3 sec requirement</li>
+    <li>Indigenous Content: <strong>68.4%</strong> by value — comfortably above 50% mandatory threshold (Category-I preference applicable)</li>
+    <li>Delivery commitment: 25% (3,125 jackets) within 115 days; 75% balance within 260 days of Purchase Order — ahead of schedule</li>
+    <li>Warranty: <strong>5 years</strong> on hard plates; <strong>5 years</strong> on soft armour; <strong>3 years</strong> on carrier</li>
+    <li>Made-in-India: All manufacturing at Bhiwadi, Rajasthan plant. No sub-contracting of critical processes.</li>
+    <li>Price Validity: <strong>180 days</strong> from date of bid submission</li>
+  </ul>
+
+  <div class="section-head">Enclosed Documents (Technical Bid Envelope)</div>
+  <ul class="enclosed-list">
+    <li class="checked">Annexure-A: Board Resolution authorising Mr. Vikram Chauhan as signatory</li>
+    <li class="checked">Annexure-B: EMD – Bank Guarantee No. SBI/BG/ND/2026/0887 for ₹ 62,50,000/- (SBI, Parliament Street Branch, New Delhi), validity 18 Nov 2026</li>
+    <li class="checked">Annexure-C: Technical Compliance Document (SGAI/MKT/CRPF/BPJ/2026/047) with compliance matrix</li>
+    <li class="checked">Annexure-C1: NIJ 0101.06 Level III+ Certificate (HPW-NIJ-III+-09872), original</li>
+    <li class="checked">Annexure-C2: BIS IS 17051:2018 Licence (CM/L-7459382) + BIS renewal receipt</li>
+    <li class="checked">Annexure-C3: ISO 9001:2015 Certificate (QMS-IN-2024-00487)</li>
+    <li class="checked">Annexure-C4: TBRL Test Reports TBRL/BPJ/2024/1187 and /1188 (self-attested copies)</li>
+    <li class="checked">Annexure-D: CRPF GSQR Certificate No. CRPF/VR/GSQR/BPJ/2024/00183</li>
+    <li class="checked">Annexure-E: Financial Documents — Audited P&amp;L and Balance Sheets FY 2022-23 to 2024-25; CA turnover certificate KJ/SGAI/CA/2025/0041</li>
+    <li class="checked">Annexure-F: Form 6 — Self-declaration on non-blacklisting (notarised)</li>
+    <li class="checked">Annexure-G: Form 7 — Indigenous Content Declaration + BoQ (CA certified)</li>
+    <li class="checked">Annexure-H: Experience certificates from BSF, CISF, CRPF, Punjab Police, Rajasthan Police, MEA (originals/attested copies)</li>
+    <li class="checked">Annexure-I: CRISIL A– credit rating report (March 2025)</li>
+    <li class="checked">Annexure-J: RSPCB Consent to Operate certificate</li>
+    <li class="checked">Annexure-K: Physical sample — 1 Nos. SGAI-APEX-3P (Size M), delivered separately via authorised courier</li>
+  </ul>
+
+  <p style="margin-top:10px;">
+    The Financial Bid has been submitted in a <strong>separate, sealed envelope</strong> superscripted with the tender number and the words "FINANCIAL BID — DO NOT OPEN WITH TECHNICAL BID." Both envelopes are enclosed within the outer sealed envelope.
+  </p>
+
+  <p>
+    We confirm that all statements made in this bid are true and accurate, and that we have not submitted any other bid for the same tender either directly or through a subsidiary or associated entity.
+  </p>
+
+  <p>Yours faithfully,</p>
+
+  <div class="sig-area">
+    <div class="sig-block">
+      <div class="sig-line"></div>
+      <strong>Mr. Vikram Chauhan</strong><br>
+      DGM – Defence &amp; Government Sales<br>
+      (Authorized Signatory per Board Resolution dt. 10 Jun 2026)<br>
+      SafeGuard Armor Industries Ltd.<br>
+      Date: 14 June 2026 &nbsp;|&nbsp; Place: New Delhi
+    </div>
+    <div class="seal-box">SAFEGUARD<br>ARMOR IND.<br>LTD.<br>⚙<br>OFFICIAL<br>SEAL</div>
+  </div>
+
+  <div class="page-num">Cover Letter | SGAI/MKT/CRPF/BPJ/2026/047/CL | Tender CRPF/IG(P&amp;L)/2026-27/BPJ/0041</div>
+</div>
+
+<!-- DOC 4B: Financial Bid -->
+<div class="page page-red">
+  <div class="watermark">FINANCIAL BID</div>
+
+  <div class="lh" style="border-color: #8b0000;">
+    <div class="lh-logo">
+      <div class="lh-icon" style="background: linear-gradient(135deg,#8b0000,#cc2200);">🛡</div>
+      <div>
+        <div class="lh-name" style="color:#8b0000;">SafeGuard Armor Industries Ltd.</div>
+        <span class="lh-tag">Financial Bid — STRICTLY CONFIDENTIAL — Not to be opened with Technical Bid</span>
+      </div>
+    </div>
+    <div class="lh-contact">
+      Ref: SGAI/MKT/CRPF/BPJ/2026/047/FB<br>
+      Date: 14 June 2026<br>
+      <strong style="color:#8b0000;">FINANCIAL BID ENVELOPE</strong>
+    </div>
+  </div>
+
+  <div class="doc-label" style="color:#8b0000; border-color:#8b0000; background:#fff5f5;">
+    FINANCIAL BID — PRICE SCHEDULE (SCHEDULE OF RATES)
+  </div>
+
+  <div class="ref-line">
+    <div>Tender No.: <span>CRPF/IG(P&L)/2026-27/BPJ/0041</span></div>
+    <div>Bidder Ref: <span>SGAI/MKT/CRPF/BPJ/2026/047/FB</span></div>
+    <div>Bid Date: <span>14 June 2026</span></div>
+    <div>Price Validity: <span>180 days from date of submission</span></div>
+  </div>
+
+  <p style="font-size:10.5px; font-style:italic; color:#555; margin-bottom:12px;">
+    All prices are in Indian Rupees (₹). Prices are inclusive of all applicable taxes (GST), packing, forwarding, transit insurance, and delivery to all consignee locations as per Annexure-I of the tender (COs, various States). Freight and delivery charges are borne by the seller. No separate freight/loading charges shall be payable.
+  </p>
+
+  <div class="section-head section-head-red">Part I: Main Supply — Bulletproof Jackets (Item 1)</div>
+  <table>
+    <tr>
+      <th rowspan="2">S. No.</th>
+      <th rowspan="2">Item Description</th>
+      <th rowspan="2">HSN Code</th>
+      <th rowspan="2">UOM</th>
+      <th rowspan="2">Qty.</th>
+      <th colspan="3" style="text-align:center; background:#5a0000;">Unit Rate Breakup (₹)</th>
+      <th rowspan="2">GST Rate (%)</th>
+      <th rowspan="2">GST Amt per unit (₹)</th>
+      <th rowspan="2">All-Inclusive Unit Rate (₹)</th>
+      <th rowspan="2">Total Amount (₹)</th>
+    </tr>
+    <tr>
+      <th style="background:#700000; font-size:9px;">Basic Rate</th>
+      <th style="background:#700000; font-size:9px;">Packing &amp; Fwdg.</th>
+      <th style="background:#700000; font-size:9px;">Insurance</th>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>BPJ Level III+ (SGAI-APEX-3P), fully assembled: SiC hard plate set (F+R) + UHMWPE soft armour panel + Cordura carrier + QR system + MOLLE webbing. <strong>Size: Small (S)</strong></td>
+      <td class="mono">87090090</td>
+      <td>No.</td>
+      <td>2,500</td>
+      <td class="mono">36,800</td>
+      <td class="mono">320</td>
+      <td class="mono">180</td>
+      <td>12%</td>
+      <td class="mono">4,476</td>
+      <td class="mono"><strong>41,776</strong></td>
+      <td class="mono">10,44,40,000</td>
+    </tr>
+    <tr>
+      <td>1.2</td>
+      <td>BPJ Level III+ (SGAI-APEX-3P), <strong>Size: Medium (M)</strong></td>
+      <td class="mono">87090090</td>
+      <td>No.</td>
+      <td>5,000</td>
+      <td class="mono">37,200</td>
+      <td class="mono">320</td>
+      <td class="mono">180</td>
+      <td>12%</td>
+      <td class="mono">4,524</td>
+      <td class="mono"><strong>42,224</strong></td>
+      <td class="mono">21,11,20,000</td>
+    </tr>
+    <tr>
+      <td>1.3</td>
+      <td>BPJ Level III+ (SGAI-APEX-3P), <strong>Size: Large (L)</strong></td>
+      <td class="mono">87090090</td>
+      <td>No.</td>
+      <td>3,500</td>
+      <td class="mono">37,600</td>
+      <td class="mono">320</td>
+      <td class="mono">180</td>
+      <td>12%</td>
+      <td class="mono">4,572</td>
+      <td class="mono"><strong>42,672</strong></td>
+      <td class="mono">14,93,52,000</td>
+    </tr>
+    <tr>
+      <td>1.4</td>
+      <td>BPJ Level III+ (SGAI-APEX-3P), <strong>Size: XL (Extra Large)</strong></td>
+      <td class="mono">87090090</td>
+      <td>No.</td>
+      <td>1,500</td>
+      <td class="mono">38,000</td>
+      <td class="mono">320</td>
+      <td class="mono">180</td>
+      <td>12%</td>
+      <td class="mono">4,620</td>
+      <td class="mono"><strong>43,120</strong></td>
+      <td class="mono">6,46,80,000</td>
+    </tr>
+    <tr class="subtotal-row">
+      <td colspan="11" style="text-align:right; font-weight:700;">Sub-Total — Item 1 (Main Supply, 12,500 Nos.):</td>
+      <td class="mono" style="font-weight:700; font-size:12px;">₹ 52,95,92,000</td>
+    </tr>
+  </table>
+
+  <div class="section-head section-head-red">Part II: Spare Carrier Assembly (Item 2)</div>
+  <table>
+    <tr>
+      <th>S. No.</th><th>Description</th><th>HSN</th><th>UOM</th><th>Qty.</th><th>Basic Rate (₹)</th><th>GST @12% (₹)</th><th>All-Incl. Unit Rate (₹)</th><th>Total Amt. (₹)</th>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>Spare Carrier Assembly (outer vest only, Cordura 1000D, MOLLE, QR buckle, size mix S:M:L:XL = 20:40:30:10)</td>
+      <td class="mono">62099090</td>
+      <td>Set</td>
+      <td>2,500</td>
+      <td class="mono">4,800</td>
+      <td class="mono">576</td>
+      <td class="mono"><strong>5,376</strong></td>
+      <td class="mono">1,34,40,000</td>
+    </tr>
+    <tr class="subtotal-row">
+      <td colspan="8" style="text-align:right; font-weight:700;">Sub-Total — Item 2 (Spare Carriers, 2,500 Nos.):</td>
+      <td class="mono" style="font-weight:700;">₹ 1,34,40,000</td>
+    </tr>
+  </table>
+
+  <div class="price-summary" style="border-color:#8b0000;">
+    <div class="price-row">
+      <span>Sub-Total Item 1 (BPJ, 12,500 Nos.)</span>
+      <span class="mono"><strong>₹ 52,95,92,000</strong></span>
+    </div>
+    <div class="price-row">
+      <span>Sub-Total Item 2 (Spare Carriers, 2,500 Nos.)</span>
+      <span class="mono"><strong>₹ 1,34,40,000</strong></span>
+    </div>
+    <div class="price-row">
+      <span>Packing &amp; Forwarding (included above)</span>
+      <span class="mono">₹ 0 (inclusive)</span>
+    </div>
+    <div class="price-row">
+      <span>Transit Insurance (included above)</span>
+      <span class="mono">₹ 0 (inclusive)</span>
+    </div>
+    <div class="price-total" style="color:#8b0000;">
+      <span>TOTAL CONTRACT VALUE (All inclusive, incl. GST, delivery PAN-India)</span>
+      <span class="mono">₹ 54,30,32,000</span>
+    </div>
+    <div style="text-align:center; margin-top:6px; font-size:10px; font-style:italic; color:#555;">
+      Rupees Fifty-Four Crore Thirty Lakh Thirty-Two Thousand Only (₹ 54,30,32,000/-)
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>Price Validity:</strong> 180 days from date of submission (i.e., until 10 December 2026). Prices are FIRM and not subject to escalation.<br>
+    <strong>Delivery Basis:</strong> Prices are on <strong>CIF (Consignee's Doorstep) basis</strong>, all consignee locations per Annexure-I.<br>
+    <strong>GST:</strong> GST @ 12% (CGST 6% + SGST/IGST 6%) included in quoted price. Any change in GST rate after contract award shall be borne/passed as per GFR provisions.<br>
+    <strong>Performance Security:</strong> 3% of contract value (₹ 1,62,90,960) as Bank Guarantee, valid for 60 days beyond warranty period.
+  </div>
+
+  <div class="sig-area">
+    <div class="sig-block">
+      <div class="sig-line" style="border-color:#8b0000;"></div>
+      <strong>Mr. Vikram Chauhan</strong><br>
+      Authorized Signatory<br>
+      SafeGuard Armor Industries Ltd.<br>
+      Date: 14 June 2026
+    </div>
+    <div class="seal-box" style="border-color:#8b0000; color:#8b0000;">SAFEGUARD<br>ARMOR IND.<br>FINANCIAL<br>BID SEAL<br>2026</div>
+  </div>
+  <div class="page-num">Financial Bid | SGAI/MKT/CRPF/BPJ/2026/047/FB | Tender CRPF/IG(P&L)/2026-27/BPJ/0041</div>
+</div>
+
+<!-- DOC 4C: BoQ with Indigenous Content Declaration (Form 7) -->
+<div class="page page-green">
+  <div class="watermark">INDIGENOUS CONTENT</div>
+
+  <div class="lh" style="border-color:#1a5c2a;">
+    <div class="lh-logo">
+      <div class="lh-icon" style="background:linear-gradient(135deg,#1a5c2a,#2d8c45);">🛡</div>
+      <div>
+        <div class="lh-name" style="color:#1a5c2a;">SafeGuard Armor Industries Ltd.</div>
+        <span class="lh-tag">Annexure-G: Indigenous Content Declaration — Form 7 &amp; CA-Certified Bill of Quantities</span>
+      </div>
+    </div>
+    <div class="lh-contact">
+      Ref: SGAI/MKT/CRPF/BPJ/2026/047/G<br>
+      Date: 14 June 2026
+    </div>
+  </div>
+
+  <div class="doc-label" style="color:#1a5c2a; border-color:#1a5c2a; background:#f0fdf4;">
+    FORM 7: INDIGENOUS CONTENT DECLARATION (DPIIT / GFR 2017)<br>
+    <span style="font-size:10px; font-weight:400; letter-spacing:1px;">Pursuant to DPIIT Notification P-45021/2/2017-BE-II | Category II Notified Item</span>
+  </div>
+
+  <div class="info-grid">
+    <div class="ig-cell"><div class="lbl">Bidder / Vendor</div><div class="val">SafeGuard Armor Industries Ltd.</div></div>
+    <div class="ig-cell"><div class="lbl">Tender No.</div><div class="val">CRPF/IG(P&amp;L)/2026-27/BPJ/0041</div></div>
+    <div class="ig-cell"><div class="lbl">Product Offered</div><div class="val">SGAI-APEX-3P — BPJ Level III+</div></div>
+    <div class="ig-cell"><div class="lbl">DIPP Category</div><div class="val">Category II (notified — body armour)</div></div>
+    <div class="ig-cell"><div class="lbl">Declared Indigenou Content %</div><div class="val" style="font-size:15px; color:#1a5c2a;"><strong>68.4%</strong></div></div>
+    <div class="ig-cell"><div class="lbl">Threshold Required</div><div class="val">≥ 50% (mandatory); ≥ 75% for Category-II preference</div></div>
+  </div>
+
+  <div class="percent-bar-wrap" style="margin:12px 0;">
+    <span style="font-size:11px; min-width:140px; color:#555;">Indigenous Content:</span>
+    <div class="pbar">
+      <div class="pbar-fill" style="width:68.4%;"></div>
+    </div>
+    <span class="pbar-label">68.4%</span>
+    <span style="font-size:10px; background:#1a5c2a; color:#fff; padding:2px 8px; border-radius:2px; font-weight:700;">CATEGORY-I PREFERENCE</span>
+  </div>
+
+  <div class="section-head section-head-green">Bill of Quantities — Per Unit Cost Breakup (SGAI-APEX-3P, Size M — Representative Unit)</div>
+  <p style="font-size:10px; font-style:italic; color:#555; margin-bottom:6px;">
+    Values represent unit-level cost for one BPJ (Size M). CA-certified aggregate basis. All values in ₹.
+  </p>
+
+  <table>
+    <tr>
+      <th>SN</th>
+      <th>Component / Material</th>
+      <th>DIPP Category</th>
+      <th>Source (Indian / Imported)</th>
+      <th>Supplier Name (India)</th>
+      <th>Unit Cost (₹)</th>
+      <th>Indigenous?</th>
+      <th>Local Value (₹)</th>
+      <th>Import Value (₹)</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Silicon Carbide (SiC) Ceramic Plates (2 pcs, F+R)</td>
+      <td>C-5702</td>
+      <td>Indian (Domestic)</td>
+      <td>Hindustan Advanced Materials Pvt. Ltd., Pune</td>
+      <td class="mono">8,400</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">8,400</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>UHMWPE Composite Laminate — 18-ply soft armour panel</td>
+      <td>C-3902</td>
+      <td>Indian (Domestic)</td>
+      <td>Garware Hi-Tech Films Ltd., Nashik</td>
+      <td class="mono">5,600</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">5,600</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1000D Cordura Nylon fabric — carrier &amp; pockets (Toray India)</td>
+      <td>C-5407</td>
+      <td>Indian (Domestic)</td>
+      <td>Toray International India Pvt. Ltd., Mumbai</td>
+      <td class="mono">1,850</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">1,850</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>MOLLE webbing — nylon; shoulder straps &amp; side panels</td>
+      <td>C-5407</td>
+      <td>Indian (Domestic)</td>
+      <td>Bharat Webbing Mills, Surat</td>
+      <td class="mono">420</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">420</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>SGAI-QR™ Quick-Release Buckle Assembly (proprietary)</td>
+      <td>C-7326</td>
+      <td>Indian (In-house manufactured)</td>
+      <td>SafeGuard Armor Industries Ltd. (self)</td>
+      <td class="mono">680</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">680</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Velcro® fastener (hook &amp; loop)</td>
+      <td>C-5603</td>
+      <td>Indian (Domestic)</td>
+      <td>Velcro India Pvt. Ltd., Mumbai</td>
+      <td class="mono">210</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">210</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Zip fasteners (YKK-grade; BoQ type 10C, 8 nos.)</td>
+      <td>C-5603</td>
+      <td>Indian (Domestic)</td>
+      <td>YKK India Pvt. Ltd., Faridabad</td>
+      <td class="mono">180</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">180</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Polyurethane adhesive for ceramic bonding (Huntsman Araldite AW 109)</td>
+      <td>C-2009</td>
+      <td><strong>Imported</strong></td>
+      <td>—</td>
+      <td class="mono">980</td>
+      <td class="boq-import">NO</td>
+      <td class="mono">—</td>
+      <td class="mono boq-import">980</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>DWR (Durable Water Repellent) treatment chemical (Sciessent, USA)</td>
+      <td>C-2009</td>
+      <td><strong>Imported</strong></td>
+      <td>—</td>
+      <td class="mono">320</td>
+      <td class="boq-import">NO</td>
+      <td class="mono">—</td>
+      <td class="mono boq-import">320</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Tamper-evident sewing thread (Curity-brand, imported specialty)</td>
+      <td>C-5407</td>
+      <td><strong>Imported</strong></td>
+      <td>—</td>
+      <td class="mono">75</td>
+      <td class="boq-import">NO</td>
+      <td class="mono">—</td>
+      <td class="mono boq-import">75</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Labels, QR sticker, warranty card, instruction manual (print)</td>
+      <td>C-1812</td>
+      <td>Indian (Domestic)</td>
+      <td>Suresh Digital Print, Gurgaon</td>
+      <td class="mono">85</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">85</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>CFB Carton box (5-ply), vacuum polybag (packing material)</td>
+      <td>C-1704</td>
+      <td>Indian (Domestic)</td>
+      <td>Allied Packaging Pvt. Ltd., Bhiwadi</td>
+      <td class="mono">320</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">320</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Direct Labour (cutting, stitching, assembly, QC, packing)</td>
+      <td>—</td>
+      <td>Indian (In-house)</td>
+      <td>SGAI workforce at Bhiwadi plant</td>
+      <td class="mono">5,200</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">5,200</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Factory overheads, utilities, depreciation (allocated per unit)</td>
+      <td>—</td>
+      <td>Indian</td>
+      <td>SGAI Bhiwadi plant</td>
+      <td class="mono">3,100</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">3,100</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Quality testing, inspection &amp; TBRL witness fire (amortised)</td>
+      <td>—</td>
+      <td>Indian</td>
+      <td>TBRL Chandigarh, NABL labs</td>
+      <td class="mono">600</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">600</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Freight, logistics, insurance (CIF consignee)</td>
+      <td>—</td>
+      <td>Indian</td>
+      <td>Various Indian carriers</td>
+      <td class="mono">500</td>
+      <td class="boq-local">YES</td>
+      <td class="mono boq-local">500</td>
+      <td class="mono">—</td>
+    </tr>
+    <tr>
+      <td colspan="9" style="background:#eee; font-size:10px; font-style:italic; color:#555;">* Profit margin (₹ 9,281) and tax components excluded from BoQ cost as per DPIIT guidelines for indigenous content computation. CA note attached.</td>
+    </tr>
+    <tr class="subtotal-row">
+      <td colspan="5" style="font-weight:700; text-align:right;">TOTAL COST (ex-profit, ex-tax):</td>
+      <td class="mono" style="font-weight:700;">28,520</td>
+      <td>—</td>
+      <td class="mono boq-local" style="font-weight:700;">27,145</td>
+      <td class="mono boq-import" style="font-weight:700;">1,375</td>
+    </tr>
+    <tr class="total-row">
+      <td colspan="6" style="font-size:13px; text-align:right;">INDIGENOUS CONTENT % = 27,145 / 28,520 × 100 =</td>
+      <td colspan="3" style="font-size:16px; text-align:center; background:#1a5c2a;">68.4%</td>
+    </tr>
+  </table>
+
+  <div class="note-box" style="border-color:#1a5c2a; background:#f0fdf4; margin-top:10px;">
+    <strong>CA Certification:</strong> I, <strong>Sunita Agarwal</strong>, Chartered Accountant (ICAI Membership No. 187643), FCA, have verified the above Bill of Quantities against the books of accounts, purchase invoices, and production records of SafeGuard Armor Industries Ltd. for the model SGAI-APEX-3P. I certify that the indigenous content percentage declared above is accurate to the best of my knowledge and as per the DPIIT definition of local content.
+    <br><br>
+    <strong>Place:</strong> New Delhi &nbsp;|&nbsp; <strong>Date:</strong> 12 June 2026 &nbsp;|&nbsp; <strong>Firm:</strong> M/s Kapoor &amp; Jain, Chartered Accountants (FRN: 011437N)<br>
+    <em>(CA signature, stamp and UDIN: 26187643BBAHZP7321)</em>
+  </div>
+
+  <div style="border: 2px solid #1a5c2a; padding:12px 16px; margin-top:14px; background:#f7fdf7;">
+    <p style="font-size:11px; font-weight:700; color:#1a5c2a; margin-bottom:8px;">FORM 7: DECLARATION BY AUTHORISED SIGNATORY</p>
+    <p style="font-size:11px; line-height:1.8;">
+      I, <strong>Vikram Chauhan</strong>, DGM (Defence Sales), duly authorised representative of <strong>SafeGuard Armor Industries Ltd.</strong>, hereby solemnly declare that the information furnished in this Form 7 and the accompanying Bill of Quantities is true, accurate, and correct to the best of my knowledge and belief. I understand that any false declaration shall render our bid liable to rejection, blacklisting, and legal action under applicable laws.
+    </p>
+    <p style="font-size:11px; margin-top:8px;">
+      I further declare that the indigenous content in the offered product (SGAI-APEX-3P) is <strong>68.4%</strong>, which is above the mandatory threshold of 50% as notified by DPIIT.
+    </p>
+  </div>
+
+  <div class="sig-area">
+    <div class="sig-block">
+      <div class="sig-line" style="border-color:#1a5c2a;"></div>
+      <strong>Vikram Chauhan</strong> — Authorized Signatory<br>
+      SafeGuard Armor Industries Ltd.<br>
+      Date: 14 June 2026 | Place: New Delhi<br>
+      <em>(Notarially attested copy of Board Resolution enclosed)</em>
+    </div>
+    <div class="seal-box" style="border-color:#1a5c2a; color:#1a5c2a;">SAFEGUARD<br>ARMOR IND.<br>FORM 7<br>⚙ SEAL<br>2026</div>
+  </div>
+
+  <div class="page-num">Annexure-G (Form 7 + BoQ) | SGAI/MKT/CRPF/BPJ/2026/047 | Tender CRPF/IG(P&L)/2026-27/BPJ/0041</div>
+</div>
+
+</body>
+</html>

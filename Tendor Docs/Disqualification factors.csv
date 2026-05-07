@@ -1,0 +1,8 @@
+﻿Category,Disqualification Trigger,Impact
+Financial,Any shortfall in the average annual turnover (even by 1 Lakh).,Immediate Rejection
+Ballistic,"Submission of test reports for any panel below BIS Level-6 (e.g., Level-5 or 4).",Immediate Rejection
+Commercial,EMD amount less than Rs. 2.75 Crores or submitted in an unapproved format.,Immediate Rejection
+Experience,Submitting past performance records for non-ballistic or low-threat (Below Level-5) items.,Immediate Rejection
+Legal,Lack of a valid Industrial License from DPIIT specifically for BR Jackets.,Immediate Rejection
+Administrative,Failure to provide a signed Manufacturer Authorization Form (MAF) if the bidder is not the OEM.,Immediate Rejection
+Technical,Deviations from the specified CRPF Digital Camouflage pattern or material specs.,Immediate Rejection

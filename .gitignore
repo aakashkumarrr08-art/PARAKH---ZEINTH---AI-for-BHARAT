@@ -1,0 +1,16 @@
+.DS_Store
+
+# Duplicate nested folder; top-level docs are already present.
+AI for Bharat Hacakthon/
+
+# Python/local runtime artifacts.
+parakh/backend/.venv/
+parakh/backend/app/__pycache__/
+
+# Frontend build and dependency artifacts.
+parakh/frontend/node_modules/
+parakh/frontend/.next/
+parakh/frontend/tsconfig.tsbuildinfo
+
+# Large local database/downloads not meant for GitHub.
+parakh/local-runtime/

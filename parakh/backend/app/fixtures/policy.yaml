@@ -1,0 +1,58 @@
+app_policy:
+  philosophy: "The system’s job is not to make eligibility decisions. Its job is to make decisions transparent, consistent, and defensible so that officers can explain them to anyone who asks."
+  verdicts:
+    - Eligible
+    - Not Eligible
+    - Needs Manual Review
+  manual_review_triggers:
+    - LOW_EVIDENCE
+    - SUBJECTIVE_CRITERION
+    - MISSING_REQUIRED_DOCUMENT
+evaluation:
+  ocr_confidence_threshold: 0.75
+  allow_llm_verdicts: false
+  bidder_status_priority:
+    - DISQUALIFIED
+    - UNDER_REVIEW
+    - OK
+  tolerances:
+    emd_amount_variance_inr: 0
+    turnover_shortfall_lakh: 0
+    ballistic_floor_level: 6
+    supply_history_min_level: 5
+    supply_history_min_units: 1500
+    bidder_turnover_min_lakh: 500
+    oem_turnover_min_lakh: 1000
+    emd_validity_days_beyond_bid: 45
+ambiguity_rules:
+  missing_or_low_confidence: "Needs Manual Review"
+  subjective_criteria: "Needs Manual Review"
+disqualification_rules:
+  - rule_id: financial_1
+    category: Financial
+    trigger: "Any shortfall in the average annual turnover (even by 1 Lakh)."
+    impact: "Immediate Rejection"
+  - rule_id: ballistic_2
+    category: Ballistic
+    trigger: "Submission of test reports for any panel below BIS Level-6 (e.g., Level-5 or 4)."
+    impact: "Immediate Rejection"
+  - rule_id: commercial_3
+    category: Commercial
+    trigger: "EMD amount less than Rs. 2.75 Crores or submitted in an unapproved format."
+    impact: "Immediate Rejection"
+  - rule_id: experience_4
+    category: Experience
+    trigger: "Submitting past performance records for non-ballistic or low-threat (Below Level-5) items."
+    impact: "Immediate Rejection"
+  - rule_id: legal_5
+    category: Legal
+    trigger: "Lack of a valid Industrial License from DPIIT specifically for BR Jackets."
+    impact: "Immediate Rejection"
+  - rule_id: administrative_6
+    category: Administrative
+    trigger: "Failure to provide a signed Manufacturer Authorization Form (MAF) if the bidder is not the OEM."
+    impact: "Immediate Rejection"
+  - rule_id: technical_7
+    category: Technical
+    trigger: "Deviations from the specified CRPF Digital Camouflage pattern or material specs."
+    impact: "Immediate Rejection"

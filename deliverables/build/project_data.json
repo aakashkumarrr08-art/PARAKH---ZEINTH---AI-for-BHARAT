@@ -1,0 +1,225 @@
+{
+  "project": {
+    "name": "PARAKH",
+    "full_name": "Procurement Audit-Ready Assessment & Knowledge Harnessing",
+    "theme": "AI-Based Tender Evaluation and Eligibility Analysis for Government Procurement by CRPF",
+    "tagline": "An officer-first procurement evaluation platform that makes tender decisions transparent, consistent, and defensible.",
+    "philosophy": "The system does not make sovereign eligibility decisions. It assembles evidence, applies deterministic rules, and preserves a reviewable trail so procurement officers can explain every outcome.",
+    "team_name": "Team Zenith",
+    "team_members": [
+      "Abhishek Neema (Leader)",
+      "Ramadhar",
+      "Aakash Kumar",
+      "Prahlad Bhatt"
+    ]
+  },
+  "problem_points": [
+    "Government tender evaluation is document-heavy, time-sensitive, and vulnerable to inconsistent interpretation.",
+    "Bid packs contain mixed formats such as digital PDFs, scans, photos, handwritten notes, annexures, and corrigenda.",
+    "Officers face personal accountability under RTI, vigilance review, audit, and legal challenge if a decision cannot be defended.",
+    "Generic black-box AI is risky because OCR uncertainty, ambiguous clauses, and subjective criteria can cause silent errors."
+  ],
+  "fit_points": [
+    "PARAKH matches the theme by applying AI only where it adds traceable operational value: document understanding, structured extraction, and decision support.",
+    "Deterministic rules handle objective criteria, while uncertain or subjective cases are escalated to officers instead of being auto-rejected.",
+    "The solution is tailored to procurement realities such as tender-side versioning, bidder-side evidence capture, and audit-ready export.",
+    "The platform directly addresses the explanation gap by preserving evidence, reasoning, overrides, and tamper-evident event history."
+  ],
+  "modules": [
+    {
+      "id": "TUE",
+      "name": "Tender Understanding Engine",
+      "purpose": "Creates a versioned criteria manifest from tender-side rules, staged into administrative, technical, and capacity checks."
+    },
+    {
+      "id": "BDI",
+      "name": "Bidder Document Intelligence",
+      "purpose": "Accepts bidder uploads, extracts text and fields, and turns heterogeneous documents into structured evidence."
+    },
+    {
+      "id": "EARE",
+      "name": "Evaluation and Ambiguity-Resolution Engine",
+      "purpose": "Maps evidence to criteria and produces deterministic three-state verdicts: Eligible, Not Eligible, or Needs Manual Review."
+    },
+    {
+      "id": "HLWAS",
+      "name": "Human-in-the-Loop Workbench and Audit System",
+      "purpose": "Lets officers review criterion-level logic, record overrides with reason codes, inspect audit history, and export reports."
+    }
+  ],
+  "workflow_steps": [
+    "Create or open a tender record.",
+    "Upload tender-side documents such as NIT, QR, annexures, corrigenda, and ATC files.",
+    "Generate a draft manifest from the seeded evaluation criteria and approve the final manifest version.",
+    "Register a bidder and upload checklist-driven submission documents.",
+    "Run document ingestion to extract evidence fields from uploaded bidder files.",
+    "Evaluate the bidder against the approved manifest to produce criterion-level events and overall status.",
+    "Review evidence, record officer overrides where required, inspect the audit timeline, and export Excel or PDF reports."
+  ],
+  "features": [
+    "Tender creation and metadata management",
+    "Tender document upload and traceability",
+    "Draft criteria manifest generation",
+    "Manifest editing and approval workflow",
+    "Checklist-driven bidder registration and upload",
+    "OCR and digital-text evidence extraction",
+    "Structured field extraction for finance, compliance, ballistic, sizing, and experience checks",
+    "Three-state verdicting with hard disqualification flags",
+    "Officer override capture with structured reason codes",
+    "Append-only hash-chained audit events",
+    "Audit timeline review",
+    "Excel and PDF audit export"
+  ],
+  "criteria": [
+    "EMD Validity",
+    "Legal Standing",
+    "Protection Level",
+    "Design/Pattern",
+    "Sizing Accuracy",
+    "Turnover Depth",
+    "Supply History"
+  ],
+  "checklist_docs": [
+    {
+      "name": "Industrial License",
+      "purpose": "Validate manufacturing authorization for bullet resistant jackets."
+    },
+    {
+      "name": "EMD Proof",
+      "purpose": "Confirm earnest money deposit amount, instrument type, and validity."
+    },
+    {
+      "name": "Ballistic Test Reports",
+      "purpose": "Verify BIS Level-6 protection for front, back, and side panels."
+    },
+    {
+      "name": "Technical Compliance",
+      "purpose": "Confirm camouflage pattern alignment and required size mix."
+    },
+    {
+      "name": "Annual Turnover Certificate",
+      "purpose": "Measure bidder and OEM average turnover against thresholds."
+    },
+    {
+      "name": "Past Performance Records",
+      "purpose": "Assess large-order supply history for comparable items."
+    },
+    {
+      "name": "OEM Authorization",
+      "purpose": "Validate supply-chain legitimacy for non-OEM bidders."
+    },
+    {
+      "name": "PAN and TIN Certificates",
+      "purpose": "Establish tax identity and legal standing."
+    },
+    {
+      "name": "Proof of Experience",
+      "purpose": "Confirm minimum industry tenure."
+    },
+    {
+      "name": "Additional Docs (ATC)",
+      "purpose": "Capture extra administrative documents requested by tender conditions."
+    }
+  ],
+  "verdicts": [
+    "Eligible",
+    "Not Eligible",
+    "Needs Manual Review"
+  ],
+  "reason_codes": [
+    "LOW_CONFIDENCE_CONFIRMED",
+    "ADDITIONAL_EVIDENCE_ACCEPTED",
+    "POLICY_EXCEPTION_APPROVED",
+    "OCR_FALSE_NEGATIVE",
+    "OFFICER_INTERPRETATION",
+    "DOCUMENT_SCOPE_CLARIFIED"
+  ],
+  "tech_stack": {
+    "frontend": [
+      "Next.js 14",
+      "React 18",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "FastAPI",
+      "Pydantic",
+      "Motor"
+    ],
+    "database": [
+      "MongoDB"
+    ],
+    "document_ai": [
+      "PyMuPDF",
+      "pdfplumber",
+      "pytesseract",
+      "OpenCV (planned / optional in current environment)"
+    ],
+    "exports": [
+      "openpyxl",
+      "ReportLab"
+    ],
+    "security": [
+      "JWT bearer tokens",
+      "Role-based access for ADMIN and OFFICER"
+    ],
+    "infra": [
+      "Docker Compose",
+      "Redis stub for future async workers"
+    ]
+  },
+  "runtime": {
+    "docker_services": [
+      "mongo",
+      "redis",
+      "backend",
+      "frontend"
+    ],
+    "local_quick_start_scripts": [
+      "start-mongo-local.cmd",
+      "start-backend-local.cmd",
+      "start-frontend-local.cmd"
+    ],
+    "demo_accounts": [
+      {
+        "username": "admin",
+        "password": "admin123",
+        "role": "ADMIN"
+      },
+      {
+        "username": "officer",
+        "password": "officer123",
+        "role": "OFFICER"
+      }
+    ],
+    "environment_variables": [
+      "MONGO_URI",
+      "MONGO_DB",
+      "REDIS_URL",
+      "JWT_SECRET",
+      "JWT_ALGORITHM",
+      "NEXT_PUBLIC_API_BASE",
+      "TESSERACT_CMD",
+      "TESSDATA_PREFIX"
+    ]
+  },
+  "prototype_limits": [
+    "Digital-text PDFs work best; OCR quality depends on document clarity and local Tesseract availability.",
+    "The current Redis container is present for future worker integration but is not yet wired into background task execution.",
+    "Clause-classifier and broader LLM-style features are intentionally bounded; final verdicting is rule-based and officer-reviewable.",
+    "The seeded manifest is generated from fixture CSV files rather than full live tender clause extraction."
+  ],
+  "future_scope": [
+    "Automated clause extraction from full tender packs and corrigenda chains",
+    "Bilingual and handwritten document robustness for field-heavy Indian procurement files",
+    "Committee mode, clarification request tracking, and deeper collaboration workflows",
+    "Advanced analytics across tenders, bidders, overrides, and recurring risk patterns",
+    "Deployment hardening for government cloud environments and production security controls",
+    "Model-assisted evidence ranking and summarization without compromising deterministic verdict control"
+  ],
+  "sample_assets": {
+    "tender_notice": "/Users/aakashkumar/Desktop/personal /AI for Bharat Hacakthon Codex/Tendor Docs/Tendor_notice.png",
+    "bidder_checklist": "/Users/aakashkumar/Desktop/personal /AI for Bharat Hacakthon Codex/Tendor Docs/Bidder's Document Checklist IMG.png",
+    "audit_report_pdf": "/Users/aakashkumar/Desktop/personal /AI for Bharat Hacakthon Codex/parakh/backend/app/uploads/audit_exports/22069962-c053-4840-93c2-6a2849506445/89aac3fe-d362-4ebe-a5b7-de731b83ad75/audit_report.pdf"
+  }
+}

@@ -1,0 +1,52 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:7
+    container_name: parakh-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  redis:
+    image: redis:7-alpine
+    container_name: parakh-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ./backend
+    container_name: parakh-backend
+    restart: unless-stopped
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+      MONGO_DB: parakh
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: parakh-dev-secret-change-me
+    volumes:
+      - ./backend/app/uploads:/app/app/uploads
+      - ./backend/app/fixtures:/app/app/fixtures
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+      - redis
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: parakh-frontend
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_BASE: http://localhost:8000/api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:
